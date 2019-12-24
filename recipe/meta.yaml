@@ -25,6 +25,7 @@ requirements:
     - pandas
     - xarray
     - netcdf4
+    - packaging
 
 test:
   imports:
