@@ -5,9 +5,13 @@ Home: https://github.com/arviz-devs/arviz
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/arviz-feedstock/blob/master/LICENSE.txt)
 
 Summary: Exploratory analysis of Bayesian models with Python
+
+Development: https://github.com/arviz-devs/arviz
+
+Documentation: https://arviz-devs.github.io/arviz/index.html
 
 ArviZ (pronounced "AR-vees") is a Python package for exploratory analysis
 of Bayesian models. Includes functions for posterior analysis, model
