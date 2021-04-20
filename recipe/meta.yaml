@@ -10,7 +10,7 @@ source:
   sha256: a9d0eb32e84a0472aa78a488ba9b12b05e7be8c2c8fb34a1ba6286cc1254ee0d
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -19,17 +19,23 @@ requirements:
     - pip
   run:
     - python >=3
+    - setuptools>=38.4
     - matplotlib-base >=3.0
-    - numpy
-    - scipy
-    - pandas
-    - xarray
-    - netcdf4
+    - numpy >=1.12
+    - scipy >=0.19
     - packaging
+    - pandas >=0.23
+    - xarray >=0.16.1
+    - netcdf4
+    - typing_extensions >=3.7.4.3,<4
 
 test:
   imports:
     - arviz
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/arviz-devs/arviz
