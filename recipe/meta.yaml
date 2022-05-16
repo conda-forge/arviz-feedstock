@@ -28,6 +28,7 @@ requirements:
     - xarray >=0.16.1
     - netcdf4
     - typing_extensions >=3.7.4.3,<4
+    - xarray-einstats>=0.2
 
 test:
   imports:
