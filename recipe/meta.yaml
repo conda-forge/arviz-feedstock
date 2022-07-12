@@ -55,6 +55,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - dhirschfeld
     - ericmjl
     - canyon289
     - aloctavodia
