@@ -153,6 +153,7 @@ Feedstock Maintainers
 =====================
 
 * [@ColCarroll](https://github.com/ColCarroll/)
+* [@OriolAbril](https://github.com/OriolAbril/)
 * [@ahartikainen](https://github.com/ahartikainen/)
 * [@aloctavodia](https://github.com/aloctavodia/)
 * [@canyon289](https://github.com/canyon289/)
