@@ -10,7 +10,7 @@ source:
   sha256: 65816761fd2a864e5da08c8663adf7260cd8c904933a88f3b86f2c1ed7510d5e
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -19,16 +19,16 @@ requirements:
     - pip
   run:
     - python >=3
-    - setuptools >=38.4
-    - matplotlib-base >=3.0
-    - numpy >=1.12
-    - scipy >=0.19
+    - setuptools >=60.0
+    - matplotlib-base >=3.5
+    - numpy >=1.20
+    - scipy >=1.8
     - packaging
-    - pandas >=0.23
-    - xarray >=0.16.1
+    - pandas >=1.4
+    - xarray >=0.21.0
     - netcdf4
-    - typing_extensions >=3.7.4.3
-    - xarray-einstats >=0.2
+    - typing_extensions >=4.1.0
+    - xarray-einstats >=0.3
 
 test:
   imports:
