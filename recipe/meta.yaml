@@ -1,5 +1,5 @@
 {% set name = "arviz" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 65816761fd2a864e5da08c8663adf7260cd8c904933a88f3b86f2c1ed7510d5e
+  sha256: a5d7148c76ab9b50fa56f2c09c71b83b1e407aa6e1aa7581b03e9a91866e91ef
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
