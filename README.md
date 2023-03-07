@@ -1,11 +1,11 @@
-About arviz
-===========
+About arviz-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/arviz-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/arviz-devs/arviz
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/arviz-feedstock/blob/main/LICENSE.txt)
 
 Summary: Exploratory analysis of Bayesian models with Python
 
