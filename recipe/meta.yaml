@@ -10,7 +10,7 @@ source:
   sha256: b05d790901dd5eaafe02d8a8f3780003f585dbdffaefacb904a162143fb1e95e
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -18,13 +18,13 @@ requirements:
     - python >=3
     - pip
   run:
-    - python >=3
+    - python >=3.9
     - setuptools >=60.0
-    - matplotlib-base >=3.5
-    - numpy >=1.20
+    - matplotlib-base >=3.2
+    - numpy >=1.21
     - scipy >=1.8
     - packaging
-    - pandas >=1.4
+    - pandas >=1.3
     - xarray >=0.21.0
     - h5netcdf >=1.0.2
     - typing_extensions >=4.1.0
@@ -50,7 +50,7 @@ about:
     of Bayesian models. Includes functions for posterior analysis, model
     checking, comparison and diagnostics.
 
-  doc_url: https://arviz-devs.github.io/arviz/index.html
+  doc_url: https://python.arviz.org
   dev_url: https://github.com/arviz-devs/arviz
 
 extra:
