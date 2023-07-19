@@ -21,7 +21,7 @@ requirements:
     - python >=3.9
     - setuptools >=60.0
     - matplotlib-base >=3.2
-    - numpy >=1.21
+    - numpy >=1.21,<2.0
     - scipy >=1.8
     - packaging
     - pandas >=1.3
