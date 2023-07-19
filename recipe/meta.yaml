@@ -1,5 +1,5 @@
 {% set name = "arviz" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b05d790901dd5eaafe02d8a8f3780003f585dbdffaefacb904a162143fb1e95e
+  sha256: 35bab9072f66f5a8204d2a71911d09ce05056c177f1a780de53efa2714c27575
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - python >=3.9
     - setuptools >=60.0
     - matplotlib-base >=3.2
-    - numpy >=1.21
+    - numpy >=1.21,<2.0
     - scipy >=1.8
     - packaging
     - pandas >=1.3
