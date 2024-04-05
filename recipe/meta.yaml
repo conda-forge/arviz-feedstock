@@ -1,5 +1,5 @@
 {% set name = "arviz" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b46dc693e34fd3dff20d824234c7a01cb04b1b536441e285218c54fab42c3c09
+  sha256: 2ffd6a632af6b28eb5dac7e3b938223ffa202308dc67c58b55a404565a985bd2
 build:
   noarch: python
   number: 0
@@ -18,17 +18,18 @@ requirements:
     - python >=3
     - pip
   run:
-    - python >=3.9
+    - python >=3.10
     - setuptools >=60.0
     - matplotlib-base >=3.5
-    - numpy >=1.22,<2.0
-    - scipy >=1.8
+    - numpy >=1.23,<2.0
+    - scipy >=1.9
     - packaging
-    - pandas >=1.4
-    - xarray >=0.21.0
+    - pandas >=1.5
+    - xarray >=2022.6.0
     - h5netcdf >=1.0.2
     - typing_extensions >=4.1.0
     - xarray-einstats >=0.3
+    - dm-tree >=0.1.8
 
 test:
   imports:
