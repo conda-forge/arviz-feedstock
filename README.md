@@ -158,4 +158,5 @@ Feedstock Maintainers
 * [@aloctavodia](https://github.com/aloctavodia/)
 * [@canyon289](https://github.com/canyon289/)
 * [@ericmjl](https://github.com/ericmjl/)
+* [@maresb](https://github.com/maresb/)
 
