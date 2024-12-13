@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "arviz" %}
 {% set version = "0.20.0" %}
 
@@ -6,20 +7,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a2704e0c141410fcaea1973a90cabf280f5aed5c1e10f44381ebd6c144c10a9c
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
     - setuptools >=60.0.0
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - setuptools >=60.0.0
     - matplotlib-base >=3.5
     - numpy >=1.23.0
@@ -36,6 +37,7 @@ test:
     - arviz
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
