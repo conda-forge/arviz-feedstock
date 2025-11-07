@@ -42,6 +42,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
+        - 3.*
 
 about:
   license: Apache-2.0
