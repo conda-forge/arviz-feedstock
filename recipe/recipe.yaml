@@ -1,26 +1,29 @@
-{% set python_min = "3.10" %}
-{% set name = "arviz" %}
-{% set version = "0.22.0" %}
+schema_version: 1
+
+context:
+  name: arviz
+  version: "0.22.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: d9df7592f1ce77ce69f7504dba13f8d550204c49c23e54849861dbcb2c640954
+
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools >=60.0.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - setuptools >=60.0.0
     - matplotlib-base >=3.8
     - numpy >=1.26.0
@@ -32,29 +35,27 @@ requirements:
     - typing_extensions >=4.1.0
     - xarray-einstats >=0.3
 
-test:
-  imports:
-    - arviz
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
+tests:
+  - python:
+      imports:
+        - arviz
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
 
 about:
-  home: https://github.com/arviz-devs/arviz
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
   summary: Exploratory analysis of Bayesian models with Python
-
   description: |
     ArviZ (pronounced "AR-vees") is a Python package for exploratory analysis
     of Bayesian models. Includes functions for posterior analysis, model
     checking, comparison and diagnostics.
 
-  doc_url: https://python.arviz.org
-  dev_url: https://github.com/arviz-devs/arviz
+  homepage: https://github.com/arviz-devs/arviz
+  repository: https://github.com/arviz-devs/arviz
+  documentation: https://python.arviz.org
 
 extra:
   recipe-maintainers:
