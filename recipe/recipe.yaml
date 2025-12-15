@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "0.22.0"
+  version: "0.23.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: d9df7592f1ce77ce69f7504dba13f8d550204c49c23e54849861dbcb2c640954
+  sha256: 772bb600c2b82eac239c5a6f0077cb5fc0536744bc32755e8471b008d0f26b8d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
