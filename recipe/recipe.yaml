@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "0.23.0"
+  version: 0.23.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 772bb600c2b82eac239c5a6f0077cb5fc0536744bc32755e8471b008d0f26b8d
+  sha256: 2a91f4c84a85ef6b41d62fa337aa059a6c83ba10db4603e359a95981eb69c10d
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
     - h5netcdf >=1.0.2
     - typing_extensions >=4.1.0
     - xarray-einstats >=0.3
-
+    - h5py
 tests:
   - python:
       imports:
