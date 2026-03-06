@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "0.23.4"
+  version: 1.0.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 611be826995066036c9443ea98d11486c279ef3da3b6cdc5c0816fab434115b9
+  sha256: 9bc978e8b590d5ee88fe024c4fa10e214dc42c31329e645b2ad998419cbe7ff6
 
 build:
   number: 0
@@ -24,18 +24,9 @@ requirements:
     - setuptools >=60.0.0
   run:
     - python >=${{ python_min }}
-    - setuptools >=60.0.0
-    - matplotlib-base >=3.8
-    - numpy >=1.26.0
-    - scipy >=1.11.0
-    - packaging
-    - pandas >=2.1.0
-    - xarray >=2023.7.0
-    - h5netcdf >=1.0.2
-    - typing_extensions >=4.1.0
-    - xarray-einstats >=0.3
-    - h5py
-    - platformdirs
+    - arviz-plots >=1.0.0,<1.1.0
+    - arviz-base >=1.0.0,<1.1.0
+    - arviz-stats >=1.0.0,<1.1.0
 tests:
   - python:
       imports:
