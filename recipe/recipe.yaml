@@ -2,48 +2,91 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "0.23.4"
+  version: "1.0.0"
+  python_min: "3.12"
 
-package:
-  name: ${{ name|lower }}
+recipe:
+  name: arviz-suite
   version: ${{ version }}
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 611be826995066036c9443ea98d11486c279ef3da3b6cdc5c0816fab434115b9
+  sha256: 9bc978e8b590d5ee88fe024c4fa10e214dc42c31329e645b2ad998419cbe7ff6
 
 build:
   number: 0
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
-requirements:
-  host:
-    - python ${{ python_min }}.*
-    - pip
-    - setuptools >=60.0.0
-  run:
-    - python >=${{ python_min }}
-    - setuptools >=60.0.0
-    - matplotlib-base >=3.8
-    - numpy >=1.26.0
-    - scipy >=1.11.0
-    - packaging
-    - pandas >=2.1.0
-    - xarray >=2023.7.0
-    - h5netcdf >=1.0.2
-    - typing_extensions >=4.1.0
-    - xarray-einstats >=0.3
-    - h5py
-    - platformdirs
-tests:
-  - python:
-      imports:
-        - arviz
-      pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - 3.*
+outputs:
+  - package:
+      name: arviz
+    build:
+      noarch: python
+      script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - flit-core >=3.4,<4
+        - pip
+      run:
+        - arviz-base >=1.0.0,<1.1.0
+        - arviz-stats >=1.0.0,<1.1.0
+        - arviz-plots >=1.0.0,<1.1.0
+        - matplotlib >=3.9
+    tests:
+      - python:
+          imports:
+            - arviz
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - 3.*
+  - package:
+      name: arviz-bokeh
+    build:
+      noarch: python
+      script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - flit-core >=3.4,<4
+        - pip
+      run:
+        - arviz-base >=1.0.0,<1.1.0
+        - arviz-stats >=1.0.0,<1.1.0
+        - arviz-plots >=1.0.0,<1.1.0
+        - bokeh >=3.4
+    tests:
+      - python:
+          imports:
+            - arviz
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - 3.*
+  - package:
+      name: arviz-plotly
+    build:
+      noarch: python
+      script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    requirements:
+      host:
+        - python ${{ python_min }}.*
+        - flit-core >=3.4,<4
+        - pip
+      run:
+        - arviz-base >=1.0.0,<1.1.0
+        - arviz-stats >=1.0.0,<1.1.0
+        - arviz-plots >=1.0.0,<1.1.0
+        - plotly >=5.19
+        - webcolors
+    tests:
+      - python:
+          imports:
+            - arviz
+          pip_check: true
+          python_version:
+            - ${{ python_min }}.*
+            - 3.*
 
 about:
   license: Apache-2.0
@@ -54,7 +97,7 @@ about:
     of Bayesian models. Includes functions for posterior analysis, model
     checking, comparison and diagnostics.
 
-  homepage: https://github.com/arviz-devs/arviz
+  homepage: https://python.arviz.org
   repository: https://github.com/arviz-devs/arviz
   documentation: https://python.arviz.org
 
