@@ -28,6 +28,7 @@ outputs:
         - flit-core >=3.4,<4
         - pip
       run:
+        - python >=${{ python_min }}
         - arviz-base >=1.0.0,<1.1.0
         - arviz-stats >=1.0.0,<1.1.0
         - arviz-plots >=1.0.0,<1.1.0
@@ -51,6 +52,7 @@ outputs:
         - flit-core >=3.4,<4
         - pip
       run:
+        - python >=${{ python_min }}
         - arviz-base >=1.0.0,<1.1.0
         - arviz-stats >=1.0.0,<1.1.0
         - arviz-plots >=1.0.0,<1.1.0
@@ -74,6 +76,7 @@ outputs:
         - flit-core >=3.4,<4
         - pip
       run:
+        - python >=${{ python_min }}
         - arviz-base >=1.0.0,<1.1.0
         - arviz-stats >=1.0.0,<1.1.0
         - arviz-plots >=1.0.0,<1.1.0
