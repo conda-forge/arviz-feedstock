@@ -14,7 +14,7 @@ source:
   sha256: 9bc978e8b590d5ee88fe024c4fa10e214dc42c31329e645b2ad998419cbe7ff6
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - package:
@@ -32,7 +32,7 @@ outputs:
         - arviz-base >=1.0.0,<1.1.0
         - arviz-stats >=1.0.0,<1.1.0
         - arviz-plots >=1.0.0,<1.1.0
-        - matplotlib >=3.9
+        - matplotlib-base >=3.9
     tests:
       - python:
           imports:
