@@ -29,9 +29,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - matplotlib-base >=3.9
     tests:
       - python:
@@ -53,9 +53,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - bokeh >=3.4
     tests:
       - python:
@@ -77,9 +77,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - plotly >=5.19
         - webcolors
     tests:
