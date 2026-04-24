@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "1.0.0"
+  version: "1.1.0"
   python_min: "3.12"
 
 recipe:
@@ -11,10 +11,10 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 9bc978e8b590d5ee88fe024c4fa10e214dc42c31329e645b2ad998419cbe7ff6
+  sha256: 7172c60980d47a93c3ff29be554fbeba33287e8aea88082956386b82cf995f1b
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - package:
@@ -29,9 +29,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - matplotlib-base >=3.9
     tests:
       - python:
@@ -53,9 +53,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - bokeh >=3.4
     tests:
       - python:
@@ -77,9 +77,9 @@ outputs:
         - pip
       run:
         - python >=${{ python_min }}
-        - arviz-base >=1.0.0,<1.1.0
-        - arviz-stats >=1.0.0,<1.1.0
-        - arviz-plots >=1.0.0,<1.1.0
+        - arviz-base >=1.1.0,<1.2.0
+        - arviz-stats >=1.1.0,<1.2.0
+        - arviz-plots >=1.1.0,<1.2.0
         - plotly >=5.19
         - webcolors
     tests:

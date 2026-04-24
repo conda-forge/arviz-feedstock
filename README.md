@@ -3,7 +3,7 @@ About arviz-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/arviz-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/arviz-devs/arviz
+Home: https://python.arviz.org/
 
 Package license: Apache-2.0
 
@@ -21,11 +21,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6787&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/arviz-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
@@ -36,6 +35,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-arviz-green.svg)](https://anaconda.org/conda-forge/arviz) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/arviz.svg)](https://anaconda.org/conda-forge/arviz) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/arviz.svg)](https://anaconda.org/conda-forge/arviz) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/arviz.svg)](https://anaconda.org/conda-forge/arviz) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-arviz--bokeh-green.svg)](https://anaconda.org/conda-forge/arviz-bokeh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/arviz-bokeh.svg)](https://anaconda.org/conda-forge/arviz-bokeh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/arviz-bokeh.svg)](https://anaconda.org/conda-forge/arviz-bokeh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/arviz-bokeh.svg)](https://anaconda.org/conda-forge/arviz-bokeh) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-arviz--plotly-green.svg)](https://anaconda.org/conda-forge/arviz-plotly) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/arviz-plotly.svg)](https://anaconda.org/conda-forge/arviz-plotly) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/arviz-plotly.svg)](https://anaconda.org/conda-forge/arviz-plotly) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/arviz-plotly.svg)](https://anaconda.org/conda-forge/arviz-plotly) |
 
 Installing arviz
 ================
@@ -47,16 +48,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `arviz` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `arviz, arviz-bokeh, arviz-plotly` can be installed with `conda`:
 
 ```
-conda install arviz
+conda install arviz arviz-bokeh arviz-plotly
 ```
 
 or with `mamba`:
 
 ```
-mamba install arviz
+mamba install arviz arviz-bokeh arviz-plotly
 ```
 
 It is possible to list all of the versions of `arviz` available on your platform with `conda`:
