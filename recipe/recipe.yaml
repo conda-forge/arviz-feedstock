@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: arviz
-  version: "1.2.0"
+  version: "1.3.0"
   python_min: "3.12"
 
 recipe:
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: ce9d8233691e37dc4b57b670ac1da3cca0f9312280fb0d77e7cd743772d2895c
+  sha256: 9e332c0a0da370cb1c00823678065e9b0462fbdf1efa0f38c37485cc78c8a576
 
 build:
   number: 0
